@@ -9,6 +9,7 @@ const {
   client: {
     interceptors: {
       jsonToProtobufInterceptorFactory,
+      retryInterceptorFactory,
     },
     converters: {
       jsonToProtobufFactory,
@@ -60,6 +61,7 @@ const applyStateTransitionOptions = {
         PBJSApplyStateTransitionRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -74,6 +76,7 @@ const getIdentityOptions = {
         PBJSGetIdentityRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -88,6 +91,7 @@ const getDataContractOptions = {
         PBJSGetDataContractRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -102,6 +106,7 @@ const getDocumentsOptions = {
         PBJSGetDocumentsRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 

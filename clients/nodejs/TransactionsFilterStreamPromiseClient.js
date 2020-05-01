@@ -8,6 +8,7 @@ const {
   client: {
     interceptors: {
       jsonToProtobufInterceptorFactory,
+      retryInterceptorFactory,
     },
     converters: {
       jsonToProtobufFactory,
@@ -52,6 +53,7 @@ const subscribeToTransactionsWithProofsOptions = {
         PBJSTransactionsWithProofsRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 

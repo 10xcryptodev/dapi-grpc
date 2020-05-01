@@ -9,6 +9,7 @@ const {
   client: {
     interceptors: {
       jsonToProtobufInterceptorFactory,
+      retryInterceptorFactory,
     },
     converters: {
       jsonToProtobufFactory,
@@ -66,6 +67,7 @@ const getStatusOptions = {
         PBJSGetStatusRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -80,6 +82,7 @@ const getBlockOptions = {
         PBJSGetBlockRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -94,6 +97,7 @@ const sendTransactionOptions = {
         PBJSSendTransactionRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -108,6 +112,7 @@ const getTransactionOptions = {
         PBJSGetTransactionRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -122,6 +127,7 @@ const getEstimatedTransactionFeeOptions = {
         PBJSGetEstimatedTransactionFeeRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
@@ -136,6 +142,7 @@ const subscribeToBlockHeadersWithChainLocksOptions = {
         PBJSBlockHeadersWithChainLocksRequest,
       ),
     ),
+    retryInterceptorFactory(),
   ],
 };
 
